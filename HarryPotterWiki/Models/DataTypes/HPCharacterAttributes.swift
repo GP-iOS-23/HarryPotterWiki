@@ -9,13 +9,13 @@ import Foundation
 
 struct HPCharacterAttributes: Codable {
     let animagus: String?
-    let bloodStatus: String? // blood_status
+    let bloodStatus: String?
     let boggart: String?
     let born: String?
     let died: String?
-    let familyMembers: [String] // family_member
+    let familyMembers: [String]
     let gender: String?
-    let hairColor: String? // hair_color
+    let hairColor: String?
     let height: String?
     let house: String?
     let image: String?

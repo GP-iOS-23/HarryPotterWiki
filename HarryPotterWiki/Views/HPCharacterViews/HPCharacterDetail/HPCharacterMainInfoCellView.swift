@@ -27,6 +27,7 @@ final class HPCharacterMainInfoCellView: UITableViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 16
+        imageView.tintColor = .secondarySystemFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -82,8 +83,11 @@ final class HPCharacterMainInfoCellView: UITableViewCell {
                 DispatchQueue.main.async {
                     self?.characterImageView.image = image
                 }
-            case .failure(let error):
-                print("Failed to load image, error: \(String(describing: error))")
+            case .failure:
+                let image = UIImage(systemName: "person.fill")
+                DispatchQueue.main.async {
+                    self?.characterImageView.image = image
+                }
             }
         }
     }
