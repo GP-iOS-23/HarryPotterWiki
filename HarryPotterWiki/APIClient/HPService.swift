@@ -7,7 +7,15 @@
 
 import Foundation
 
-final class HPService {
+protocol HPNetworkServiceProtocol {
+    func execute<T:Codable>(
+        _ request: HPRequest,
+        expecting type: T.Type,
+        completion: @escaping (Result<T, Error>) -> Void
+    )
+}
+
+final class HPService: HPNetworkServiceProtocol {
     static let shared = HPService()
     
     private let cacheManager = HPAPICacheManager()
@@ -76,3 +84,4 @@ final class HPService {
         return request
     }
 }
+

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Creating requests 
 final class HPRequest {
     private struct Constants {
         static let baseURL = "https://api.potterdb.com/v1"

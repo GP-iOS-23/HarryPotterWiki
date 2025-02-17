@@ -81,9 +81,6 @@ final class HPCharactersListView: UIView {
 }
 
 extension HPCharactersListView: HPCharacterViewViewModelDelegate {
-//    func didSelectFilter(_ filter: HPCharacterFilter) -> HPCharacterFilterOption? {
-//        delegate?.hpCHaracterListView(self, didSelectFilter: filter)
-//    }
     func didSelectFilter(_ filter: HPCharacterFilter, completion: @escaping (HPCharacterFilterOption?) -> Void) {
         delegate?.hpCHaracterListView(self, didSelectFilter: filter, completion: completion)
     }

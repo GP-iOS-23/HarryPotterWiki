@@ -14,12 +14,6 @@ final class HPCharacterCollectionViewCellViewModel: Hashable, Equatable {
     private let houseName: String
     private var loadTaskUUID: UUID?
     
-//    init(characterName: String, characterImageURL: URL?, houseName: String) {
-//        self.characterName = characterName
-//        self.characterImageURL = characterImageURL
-//        self.houseName = houseName
-//    }
-    
     init(character: HPCharacter) {
         self.characterName = character.attributes.name
         self.characterImageURL = URL(string: character.attributes.image ?? "")

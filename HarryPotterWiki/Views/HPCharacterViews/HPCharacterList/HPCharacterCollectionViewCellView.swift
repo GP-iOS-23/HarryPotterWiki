@@ -91,7 +91,6 @@ final class HPCharacterCollectionViewCellView: UICollectionViewCell {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        //setupLayer()
         shadowLayer?.shadowColor = UIColor.label.cgColor
     }
     

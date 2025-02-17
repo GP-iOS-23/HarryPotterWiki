@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Possible API endpoints
 @frozen public enum HPEndpoint: String, CaseIterable, Hashable {
     case books
     case characters

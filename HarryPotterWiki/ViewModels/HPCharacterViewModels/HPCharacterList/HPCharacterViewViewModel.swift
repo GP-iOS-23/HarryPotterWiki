@@ -58,17 +58,6 @@ final class HPCharacterViewViewModel: NSObject {
     }
     
     private func updateCellViewModels() {
-        // MARK: - Previous method updating cellViewModels
-//        cellViewModels = filteredCharacters.map {
-//            let imageURL = $0.attributes.image ?? ""
-//            let house = $0.attributes.house ?? ""
-//            return HPCharacterCollectionViewCellViewModel(
-//                characterName: $0.attributes.name,
-//                characterImageURL: URL(string: imageURL),
-//                houseName: house
-//            )
-//        }
-        
         cellViewModels = filteredCharacters.map { HPCharacterCollectionViewCellViewModel(character: $0) }
     }
     
@@ -138,17 +127,6 @@ final class HPCharacterViewViewModel: NSObject {
                 }
                 let startingIndex = self.filteredCharacters.count
                 self.filteredCharacters.append(contentsOf: newFilteredCharacters)
-                
-                // MARK: - Previous iteration defining newCellViewModels
-//                let newCellViewModels = newFilteredCharacters.map {
-//                    let imageURL = $0.attributes.image ?? ""
-//                    let house = $0.attributes.house ?? ""
-//                    return HPCharacterCollectionViewCellViewModel(
-//                        characterName: $0.attributes.name,
-//                        characterImageURL: URL(string: imageURL),
-//                        houseName: house
-//                    )
-//                }
                 
                 let newCellViewModels = newFilteredCharacters.map { HPCharacterCollectionViewCellViewModel(character: $0) }
                 self.cellViewModels.append(contentsOf: newCellViewModels)
